@@ -6,7 +6,7 @@ const AddTask = ({tasks,setTasklist,task,setTask}) => {
 
         }
         else{
-            const date = new Date();
+        const date = new Date();
         // console.log(e.target.task.value ,date.getTime());
         const newTask = {
             Id:date.getTime(),
