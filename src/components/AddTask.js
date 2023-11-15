@@ -1,9 +1,9 @@
-import "../App.css"
+
 const AddTask = () => {
     return (
-       <section className="">
+       <section className="addTask">
             <form>
-                <input type="text" placeholder="Add Task" name="task" maxLength={25}   />
+                <input type="text" placeholder="Add Task" autoComplete="off" name="task" maxLength={25}   />
                 <button type="Submit">Add</button>
             </form>
        </section>

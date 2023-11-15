@@ -1,9 +1,36 @@
 
 const ShowTask = () => {
+    const tasks = [
+        {id: 10001, name: "TASK A", time: "2:09:01 AM 9/14/2030"},
+        {id: 10002, name: "TASK B", time: "2:09:01 AM 9/14/2030"},
+        {id: 10003, name: "TASK C", time: "2:09:01 AM 9/14/2030"},
+    ]
     return (
-        <div>
-            <h1>I am from ShowTask</h1>
-        </div>
+        <section className="showTask">
+            <div className="head">
+                <div>
+                    <span className="title">Todo </span>
+                    <span className="count">0</span>
+                </div>
+                <button className="clearAll">Clear All</button>
+            </div>
+            <ul>
+               {
+                tasks.map(task=>(
+                <li>
+                    <p>
+                        <span>{task.name}</span>
+                        <span>{task.time}</span>
+                    </p>
+                    <i class="bi bi-pencil-square"></i>
+                    <i class="bi bi-trash"></i>
+                </li>
+                )) 
+               }
+            </ul>
+            
+
+        </section>
     );
 };
 
