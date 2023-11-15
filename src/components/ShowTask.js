@@ -1,29 +1,39 @@
 
-const ShowTask = () => {
-    const tasks = [
-        {id: 10001, name: "TASK A", time: "2:09:01 AM 9/14/2030"},
-        {id: 10002, name: "TASK B", time: "2:09:01 AM 9/14/2030"},
-        {id: 10003, name: "TASK C", time: "2:09:01 AM 9/14/2030"},
-    ]
+
+const ShowTask = ({tasks,setTasklist,task,setTask}) => {
+
+    const UpdateMe = id =>{
+        const selectedTask = tasks.find(ts => ts.Id === id)
+        setTask(selectedTask); 
+    }
+
+    const deleteMe =(id)=>{
+
+        const updateTaskList  = tasks.filter(task => task.Id !== id)
+        setTasklist(updateTaskList)
+        
+        console.log(id);
+    }
+    
     return (
         <section className="showTask">
             <div className="head">
                 <div>
                     <span className="title">Todo </span>
-                    <span className="count">0</span>
+                    <span className="count">{tasks.length}</span>
                 </div>
-                <button className="clearAll">Clear All</button>
+                <button onClick={()=>setTasklist([])} className="clearAll">Clear All</button>
             </div>
             <ul>
                {
                 tasks.map(task=>(
-                <li>
+                <li key={task.Id}>
                     <p>
                         <span>{task.name}</span>
-                        <span>{task.time}</span>
+                        <span>{task.Time}</span>
                     </p>
-                    <i class="bi bi-pencil-square"></i>
-                    <i class="bi bi-trash"></i>
+                    <i onClick={()=>UpdateMe(task.Id)} className="bi bi-pencil-square"></i>
+                    <i onClick={()=>deleteMe(task.Id)}  className="bi bi-trash"></i>
                 </li>
                 )) 
                }
