@@ -1,9 +1,12 @@
-
+import "../App.css"
 const AddTask = () => {
     return (
-        <div>
-            <h1>I am from add task</h1>
-        </div>
+       <section className="">
+            <form>
+                <input type="text" placeholder="Add Task" name="task" maxLength={25}   />
+                <button type="Submit">Add</button>
+            </form>
+       </section>
     );
 };
 
