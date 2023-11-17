@@ -1,5 +1,8 @@
- import logo from "../assets/logo.png"
+ import { useState } from "react";
+import logo from "../assets/logo.png"
  const Header = () => {
+   const [theme,setTheme] = useState("gThree")
+   document.documentElement.classList.add(theme)
     return (
        <header>
              <div className="logo">
