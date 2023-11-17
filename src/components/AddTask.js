@@ -7,6 +7,7 @@ const AddTask = ({tasks,setTasklist,task,setTask}) => {
             const updateTaskList = tasks.map(newTask =>(
                 newTask.Id === task.Id?{Id:task.Id,name:task.name ,Time:`${newDate.toLocaleTimeString()} ${newDate.toLocaleDateString()}`}: newTask
             ))
+            
             setTasklist(updateTaskList);
             setTask({});
         }
@@ -34,7 +35,7 @@ const AddTask = ({tasks,setTasklist,task,setTask}) => {
        <section className="addTask">
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Add Task" autoComplete="off" name="task" maxLength={25} uncontrolled="true" value={task.name||""} onChange={e=>setTask({...task,name:e.target.value})} />
-                <button type="Submit">Add</button>
+                <button type="Submit">{task.Id?"Update":"Add"}</button>
             </form>
        </section>
     );
