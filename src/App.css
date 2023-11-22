@@ -53,14 +53,14 @@
     padding: 20px 15px;
     border-radius: 5px;
     background-color: #FFFFFF;
-    max-width: 500px;
+    max-width: 490px;
     margin: 20px auto;
     box-shadow: var(--box-shadow);
   }
   
   .addTask form{
     display: flex;
-    gap: 7px;
+    gap: 10px;
   }
   
   .addTask form input{
@@ -192,5 +192,10 @@
   @media only screen and (max-width: 800px) {
     .showTask li{
       width: 100%;
+    }
+
+    .addTask form input{
+      
+      max-width:75%;
     }
   }

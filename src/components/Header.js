@@ -1,9 +1,10 @@
  import { useEffect, useState } from "react";
 import logo from "../assets/logo.png"
  const Header = () => {
-   const [theme,setTheme] = useState("gThree")
+   const [theme,setTheme] = useState(JSON.parse(localStorage.getItem("Theme"))||"gThree")
    
    useEffect(()=>{
+      localStorage.setItem("Theme",JSON.stringify(theme))
       document.documentElement.removeAttribute("class")
       document.documentElement.classList.add(theme)
       console.log(theme);
