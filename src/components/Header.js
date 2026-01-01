@@ -10,7 +10,7 @@ import logo from "../assets/logo.png"
       console.log(theme);
    },[theme])
     return (
-       <header>
+       <header> 
              <div className="logo">
                 <img src={logo} alt="LOGO" />
                  <span>TaskLY</span>
