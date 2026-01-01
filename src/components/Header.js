@@ -22,7 +22,6 @@ import logo from "../assets/logo.png"
                 <span onClick={()=>setTheme("gOne")} className={theme==="gOne" ?"gOne activeTheme":"gOne"}></span>
                 <span onClick={()=>setTheme("gTwo")} className={theme==="gTwo" ?"gTwo activeTheme":"gTwo"}></span>
                 <span onClick={()=>setTheme("gThree")} className={theme==="gThree" ?"gThree activeTheme":"gThree"}></span>
-
             </div>
        </header>
     );
