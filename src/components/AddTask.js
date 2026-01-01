@@ -7,7 +7,7 @@ const AddTask = ({tasks,setTasklist,task,setTask}) => {
             const updateTaskList = tasks.map(newTask =>(
                 newTask.Id === task.Id?{Id:task.Id,name:task.name ,Time:`${newDate.toLocaleTimeString()} ${newDate.toLocaleDateString()}`}: newTask
             ))
-            
+             
             setTasklist(updateTaskList);
             setTask({});
         }
